@@ -1,0 +1,217 @@
+﻿@page
+@model VaccinationWebSite.Pages.VaccinesModel
+@{
+    ViewData["Title"] = "Vaccine page";
+}
+<div class="card text-white" style="width:100%">
+    <img class="card-img-top" height="500" src="https://magazine.medlineplus.gov/images/uploads/main_images/covid19-vaccine-pregnancy.jpg" alt="Card image">
+    <div class="card-img-overlay">
+        <div class="text-center" style="position: absolute; width:100%; bottom: 20px; font-size: 45px;">
+            <p class="card-text">Vaccines and Boosters</p>
+        </div>
+    </div>
+</div>
+<div class="text-info text-center">
+    <h2 class="p-5">Care when you need it, where you need it.</h2>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col text-center">
+        <div class="card border-0">
+            <img class="mx-auto" src="https://www.rush.edu/sites/default/files/2021-01/artboard-graphic_blue-01_0.png" width="75" height="75" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Vaccine Information</h5>
+                <p class="card-text">Find the latest information about the COVID-19 vaccine, including who Rush is currently distributing the vaccine to.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <div class="card border-0">
+            <img class="mx-auto" src="https://www.rush.edu/sites/default/files/2020-07/cta-grid--icon-3.png" width="75" height="75" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Same-day Appointments</h5>
+                <p class="card-text">For primary care & selected specialties, see provider schedules & make your own appointment online, even if you’re new to Rush.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center">
+        <div class="card border-0">
+            <img class="mx-auto" src="https://www.rush.edu/sites/default/files/2020-07/cta-grid--icon-2.png" width="75" height="75" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Rush On Demand</h5>
+                <p class="card-text">Get quick care without an appointment for common conditions and everyday health concerns with Rush On Demand. We have many convenient ways to see a provider, including online virtual visits.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card m-5">
+    <div class="row">
+        <div class="col-5">
+            <img src="https://www.rush.edu/sites/default/files/styles/570x380/public/2020-12/supply-chain-mask.jpg?itok=HwXC9X0C" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-5 mx-auto my-auto">
+            <div class="align-middle">
+                <div class="card-body text-center">
+                    <h5 class="card-title">A Nationwide Effort</h5>
+                    <p class="card-text">While vaccines play a critical role in slowing the spread of COVID-19 and, eventually, helping us out of the pandemic, this will not happen overnight. Rush is working closely with public health departments, the CDC and other governing bodies to ensure a fair and equitable distribution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-info text-center">
+    <h3 class="p-5">TESTIMONIALS</h3>
+</div>
+
+<div id="testimonials" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonials" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#testimonials" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#testimonials" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="col text-center">
+                <div class="card border-0 bg-info text-white p-3" style="height: 300px">
+                    <img class="mx-auto rounded-circle" src="https://www.rush.edu/sites/default/files/styles/144x144/public/2020-12/beverly-sha.jpg?itok=VahZxMfZ" width="100" height="100" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Beverly Sha, MD, infectious disease specialist</h5>
+                        <p class="card-text">"It is very exciting to see the impressive results from Pfizer and Moderna. The side effects from the vaccines — such as site injection reactions, fatigue and muscle pain — are in line with those we see in other vaccines. In my opinion, the risk of developing COVID is greater than the risk of getting a COVID vaccine."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="col text-center">
+                <div class="card border-0 bg-info text-white p-3" style="height: 300px">
+                    <img class="mx-auto rounded-circle" src="https://www.rush.edu/sites/default/files/styles/144x144/public/2020-12/steve-lowenthal.jpg?itok=yigYFY22" width="100" height="100" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Steve Lowenthal, MD, Chief Medical Officer, Rush Copley</h5>
+                        <p class="card-text">"The emergency use FDA approval of these vaccines is a pivotal moment in our battle against COVID-19. We've been on the defensive caring for those ravaged by this illness. Now, finally, we can go on the offensive and eliminate the virus itself. We will get to the light at the end of the tunnel when the entire country gets vaccinated. I have complete faith in the rigorous research which resulted in some of the most effective vaccines we have ever seen."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="col text-center">
+                <div class="card border-0 bg-info text-white p-3" style="height: 300px">
+                    <img class="mx-auto rounded-circle" src="https://www.rush.edu/sites/default/files/styles/144x144/public/2020-12/john-segreti.jpg?itok=BZud2zy8" width="100" height="100" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">John Segreti, MD, infectious disease specialist</h5>
+                        <p class="card-text">"Vaccines are the most effective way to prevent serious diseases. These COVID-19 vaccines were delivered to a large number of people in trials to look at safety and how effective they are. The FDA, CDC and others go through many steps and stringent protocols to make sure vaccines are safe."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonials" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonials" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<div class="card m-5">
+    <div class="row">
+        
+        <div class="col-5 mx-auto">
+            <div class="card-body">
+            <h5 class="card-title">Slow the Spread</h5>
+            <p class="card-text">Distributing the vaccine widely will take time and patience. That’s why it is important to continuing doing your part to slow the spread of COVID-19 and protect yourself, your loved ones and community by doing the following:</p>
+            <ul>
+                <li>
+                    Wear a mask to protect yourself and others
+                </li>
+                <li>
+                    Practice social distancing
+                </li>
+                <li>
+                    Wash your hands
+                </li>
+                <li>
+                    Avoid indoors gatherings with those outside your immediate household
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-5">
+            <img style="height: 100%" src="https://gdb.voanews.com/47ede38f-9df8-481a-9e2c-d3a27cfe1b8d_w1023_r1_s.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+    </div>
+</div>
+
+<div class="text-info text-center">
+    <h3 class="p-5">QUESTIONS</h3>
+</div>
+
+<div class="accordion accordion-flush border-info" id="questionsVaccine">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            How do the COVID-19 vaccines work?
+            </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#questionsVaccine">
+            <div class="accordion-body">
+                <p>The Pfizer and Moderna vaccines both use mRNA, or messenger RNA. mRNA is a type of molecule that carries the information cells use to produce different proteins. Think of it as a blueprint. The vaccines harmlessly mimic the coronavirus’ ability to trigger the body’s immune responses to infections. The Pfizer and Moderna vaccines include mRNA from the coronavirus “spike” protein — which is what enables the virus to infect cells. It causes the immune system to produce cells to attack the spike, so the immune system will be prepared for a possible infection.</p>
+                <p>The Johnson &amp; Johnson vaccine does not use mRNA. Instead, it is a viral vector vaccine, which delivers a genetically modified DNA virus (which does not cause disease). The modified virus carries instructions to our cells to teach them how to make the “spike” protein that the coronavirus uses to infect people. This triggers your immune system to begin producing cells to fight off what it thinks is an infection.</p>
+                <p>Ultimately, all three of the vaccines prompt our bodies to learn how to protect us against future infection with the virus that causes COVID-19.</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            How effective are the vaccines?
+            </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#questionsVaccine">
+            <div class="accordion-body">
+                <p>The Food and Drug Administration evaluated and analyzed the safety and effectiveness data of all three COVID-19 vaccines and has found them all safe and effective in preventing COVID-19. The data for all three vaccines show that the potential benefits of receiving the vaccine outweigh the potential risks of COVID-19.</p>
+
+                <p>There is no way to accurately compare the effectiveness of the three different vaccines because none of these trials included direct comparisons with one another. Additionally, the trials occurred in different geographic areas and at different times during the COVID-19 pandemic.</p>
+
+                <p><strong>Pfizer and Moderna</strong></p>
+
+                <p>Both vaccines showed around 95% effectiveness at preventing COVID-19.</p>
+
+                <ul>
+                    <li>The Pfizer trial included 44,000 volunteers. Of those participants, only 170 developed symptoms of COVID-19. Of the 170, 162 were in the placebo group (that is, they did not receive the vaccine) and eight were in the vaccine group. Of the 10 participants who developed more severe COVID-19 symptoms, only one was in the vaccine group.</li>
+                    <li>The Moderna trial had more than 30,000 volunteers. Only 196 developed symptoms of COVID-19, and only 11 of those who developed symptoms were in the vaccine group. There were 30 cases of more pronounced COVID-19 symptoms — all of which were in the placebo group, meaning they did not get the vaccine.</li>
+                </ul>
+                <p>Both vaccines require two doses: Pfizer’s 21 days apart and Moderna’s 28 days apart. The second dose is essential. In the Pfizer study, the number of COVID cases was lower in the vaccine group than in the placebo group during the 21-day period between doses. There is some protection after the first dose. However, the second dose is required to achieve 95% efficacy; the full benefit is achieved 7 to 14 days after that second dose is given.</p>
+
+                <p>Booster doses of the Moderna and Pfizer vaccines for all people aged 18 and older were authorized by the CDC on Nov. 22, 2021.</p>
+
+                <p>Both vaccines use the same messenger RNA technology to deliver the vaccine, which is great from a production standpoint because the vaccines can be manufactured and distributed a lot more quickly.</p>
+
+                <p><strong>Johnson &amp; Johnson</strong></p>
+
+                <p>The vaccine is 66% effective in preventing moderate to severe/critical COVID-19 and 85% effective in preventing severe/critical COVID-19 infections.</p>
+
+                <p>The clinical trial was conducted in South Africa, certain countries in South America, Mexico and the U.S. The trial reflected protection against some of the COVID-19 variants.</p>
+
+                <ul>
+                    <li>The Johnson &amp; Johnson trial had about 40,000 volunteers. Starting 28 days after vaccination, there were five severe/critical cases in the vaccine group versus 34 severe/critical cases in the placebo group. Among the participants in the vaccine group, there were no COVID-19 related deaths and no COVID-19 cases that required medical intervention 28 days or more after vaccination.</li>
+                </ul>
+                <p>The Johnson &amp; Johnson vaccine requires just one dose and has been approved for people who are 18 years old and older. While there was some protection 14 days after vaccination, full effectiveness occurs at about 28 days after vaccination. Booster doses of the Johnson &amp; Johnson vaccine were authorized by the CDC on Oct. 22, 2021.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Can the vaccines give you COVID-19?
+            </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#questionsVaccine">
+            <div class="accordion-body">As with other vaccines, COVID-19 vaccines cannot give you the coronavirus or the disease it causes. They contain neither a weakened version of a live virus nor a dead version of the virus. mRNA does not get into the nucleus of your cells, and it does not change your DNA. It's rapidly broken down and not infectious because it's only a portion of the virus. There is absolutely no way you can get a COVID-19 infection from a COVID-19 vaccine.</div>
+        </div>
+    </div>
+</div>
