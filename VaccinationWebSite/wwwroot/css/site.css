@@ -16,3 +16,17 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+footer div {
+    text-align: center;
+}
+
+footer div ul a {
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+footer div ul a:hover {
+    color: #1896D3;
+}

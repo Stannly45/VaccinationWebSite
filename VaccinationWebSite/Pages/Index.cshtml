@@ -4,6 +4,207 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+<div id="main" class="carousel slide h-50 m-3" data-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#main" data-bs-slide-to="0" class="active bg-primary"></button>
+        <button type="button" data-bs-target="#main" data-bs-slide-to="1" class="bg-primary"></button>
+        <button type="button" data-bs-target="#main" data-bs-slide-to="2" class="bg-primary"></button>
+        <button type="button" data-bs-target="#main" data-bs-slide-to="3" class="bg-primary"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="2000">
+            <div class="row">
+                <div class="col d-flex flex-row-reverse align-items-lg-center">
+                    <div>
+                        <h1 class="text-lg-end">
+                            HEALTH AND EXCELLENCE <br />
+                            LEADERS
+                        </h1>
+                        <h6 class="text-lg-end mt-3 mb-3">
+                            We are one of the best hospitals <br />in excellence and with a path <br />that corroborates it.
+                        </h6>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-outline-info border-info text-black mb-2 py-3 px-4">About Us</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img id="imgIndex" src="~/images/imageMain.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" data-interval="2000">
+            <div class="row">
+                <div class="col d-flex flex-row-reverse align-items-lg-center">
+                    <div>
+                        <h1 class="text-lg-end">
+                            BLOOD DONATION <br />
+                            SAVES LIVES
+                        </h1>
+                        <h6 class="text-lg-end mt-3 mb-3">
+                            A donation is very helpful, together<br /> we can save many lives. With a little<br /> collaboration we change the world.
+                        </h6>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-outline-info border-info text-black mb-2 py-3 px-4">More info</button>
+                            <button class="btn btn-outline-danger m-2 p-2">I need blood</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img id="imgIndex" class="d-block" src="~/images/Donation.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" data-interval="2000">
+            <div class="row">
+                <div class="col d-flex flex-row-reverse align-items-lg-center">
+                    <div>
+                        <h1 class="text-lg-end">
+                            THE BEST <br />
+                            AMBULANCE SERVICE
+                        </h1>
+                        <h6 class="text-lg-end mt-3 mb-3">
+                            We have the best ambulance and <br />paramedic services prepared for any <br />emergency.
+                        </h6>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-outline-info border-info text-black mb-2 py-3 px-4">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img id="imgIndex" class="d-block" src="~/images/Ambulance.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" data-interval="2000">
+            <div class="row">
+                <div class="col d-flex flex-row-reverse align-items-lg-center">
+                    <div>
+                        <h1 class="text-lg-end">
+                            THE MOST TRAINED <br />
+                            NURSES
+                        </h1>
+                        <h6 class="text-lg-end mt-3 mb-3">
+                            As part of our training plan <br /> we are constantly training <br />our nurses.
+                        </h6>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-outline-info border-info text-black mb-2 py-3 px-4">See Plans</button>
+                            <button class="btn btn-outline-success m-2 p-2">I Wanna to Join</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <img id="imgIndex" class="d-block" src="~/images/Nursing.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#main" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#main" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+<hr class="border-primary m-3" />
+
+<div class="d-flex justify-content-center mb-5">
+    <div class="card border-info" style="width: 14rem;">
+        <img class="card-img-top" src="~/images/IconHeart.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Warm Heart</h5>
+            <p class="card-text">We have many payment plans so you can access a reliable health plan.</p>
+            <a href="#" class="btn btn-outline-info border-info text-black mb-2 py-3 px-4">See plans</a>
+        </div>
+    </div>
+    <div class="card border-primary" style="width: 14rem;">
+        <img class="card-img-top" src="~/images/test-icon.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Lab Test</h5>
+            <p class="card-text">We have an entire laboratory equipped to be able to help immediately.</p>
+            <a href="#" class="btn btn-outline-info border-info text-black mb-2 py-3 px-4">More Info</a>
+        </div>
+    </div>
+    <div class="card border-info" style="width: 14rem;">
+        <img class="card-img-top" src="~/images/exam-icon.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Symptom check</h5>
+            <p class="card-text">Consultations are available 24 hours a day, we are always attentive</p>
+            <a href="#" class="btn btn-outline-info border-info text-black mb-2 py-3 px-4">Specialties</a>
+        </div>
+    </div>
+    <div class="card border-primary" style="width: 14rem;">
+        <img class="card-img-top" src="~/images/chat-icon.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Online Help</h5>
+            <p class="card-text">The distance is not inconvenient, we have a service for you</p>
+            <a href="#" class="btn btn-outline-info border-info text-black mb-2 py-3 px-4 ">Start Chat</a>
+        </div>
+    </div>
+</div>
+<hr class="border-primary m-3" />
+<div class="row mb-3 mt-3">
+    <div class="col">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="d-flex justify-content-end"><img src="~/images/kidney-icon.png" class="w-50 border-info" /></div>
+
+            </div>
+            <div class="col-sm-8">
+                <h4 class="text-info">
+                    Transplant services
+                </h4>
+                <h6>
+                    As part of the donation campaign we are always waiting for donations, this so that our patients have better care.
+                </h6>
+            </div>
+        </div>
+    </div><div class="col">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="d-flex justify-content-end"><img src="~/images/doctor-icon.png" class="w-50 border-info" /></div>
+            </div>
+            <div class="col-sm-8">
+                <h4 class="text-info">
+                    Qualified doctors
+                </h4>
+                <h6>
+                    We have one of the best recruitment programs in the area, this allows us to offer the best doctors in many specialties.
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="d-flex justify-content-end"><img src="~/images/clock-icon.png" class="w-50 border-info" /></div>
+
+            </div>
+            <div class="col-sm-8">
+                <h4 class="text-info">
+                    24 Hours Service
+                </h4>
+                <h6>
+                    A 24-hour emergency service, you never know when an accident will happen, that's why we are always on the lookout.
+                </h6>
+            </div>
+        </div>
+    </div><div class="col">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="d-flex justify-content-end"><img src="~/images/ambulance-icon.png" class="w-50 border-info" /></div>
+            </div>
+            <div class="col-sm-8">
+                <h4 class="text-info">
+                    Emergency Department
+                </h4>
+                <h6>
+                    Our emergency service is one of the fastest and most efficient in the city and we are among the top 10 in the country.
+                </h6>
+            </div>
+        </div>
+    </div>
 </div>
