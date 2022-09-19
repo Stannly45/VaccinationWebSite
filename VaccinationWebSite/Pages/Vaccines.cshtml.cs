@@ -7,6 +7,7 @@ namespace VaccinationWebSite.Pages
     {
         public void OnGet()
         {
+            
         }
     }
 }
