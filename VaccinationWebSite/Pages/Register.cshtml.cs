@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using VaccinationWebSite.Model;
 using VaccinationWebSite.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace VaccinationWebSite.Pages
 {
@@ -23,16 +24,21 @@ namespace VaccinationWebSite.Pages
             {
                 return Page();
             }
-            people = _context.Persons.Find(ci);
-            if (people != null)
+            //people = _context.Persons.Find(ci);
+            var people = from m in _context.Persons select m;
+            people = people.Where(s => s.CI.Equals(ci));
+
+            if (people.Count() > 0)
             {
-                ViewData["person"] = people;
+                Person p = people.First();
+                ViewData["ID"] = p.ID;
+                //return RedirectToPage("NewVaccine",p.ID);
+                return Redirect(string.Format("~/NewVaccine?name={0}", p.ID));
             }
             else
             {
-                ViewData["person"] = "null";
+                return RedirectToPage("NewRegister");
             }
-            return RedirectToPage("NewRegister");
         }
     }
 }

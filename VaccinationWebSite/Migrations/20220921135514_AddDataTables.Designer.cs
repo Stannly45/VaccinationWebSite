@@ -12,7 +12,7 @@ using VaccinationWebSite.Data;
 namespace VaccinationWebSite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220918220556_AddDataTables")]
+    [Migration("20220921135514_AddDataTables")]
     partial class AddDataTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,14 +74,25 @@ namespace VaccinationWebSite.Migrations
 
             modelBuilder.Entity("VaccinationWebSite.Model.Register", b =>
                 {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
                     b.Property<int>("ID_Person")
                         .HasColumnType("int");
 
                     b.Property<int>("ID_Vaccine")
                         .HasColumnType("int");
 
+                    b.Property<int>("Notified")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("VaccineDate")
                         .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
 
                     b.ToTable("Registers");
                 });

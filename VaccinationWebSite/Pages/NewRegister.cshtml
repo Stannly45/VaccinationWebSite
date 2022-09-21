@@ -6,80 +6,35 @@
 <div class="text-info text-center">
     <h1 class="p-5">NEW REGISTER</h1>
 </div>
-<div class="row justify-content-center" >
+<div class="row justify-content-center">
     <form class="p-3 col-6" method="post">
         <div class="form-row">
             <div class="form-group">
-                <label class="m-3">FIRST NAME:</label>
-                <input type="text" class="form-control" placeholder="Name">
+                <label class="m-3" asp-for="Person.Name">FIRST NAME:</label>
+                <input type="text" asp-for="Person.Name" class="form-control" placeholder="Name">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group">
-                <label class="m-3">LAST NAME:</label>
-                <input type="text" class="form-control" placeholder="Last Name">
+                <label class="m-3" asp-for="Person.LastName">LAST NAME:</label>
+                <input type="text" class="form-control" asp-for="Person.LastName" placeholder="Last Name">
             </div>
         </div>
         <div class="form-group">
-            <label class="m-3">CI:</label>
-            <input type="text" class="form-control" placeholder="CI: 00000001">
+            <label class="m-3" asp-for="Person.CI">CI:</label>
+            <input type="text" asp-for="Person.CI" class="form-control" placeholder="CI: 00000001">
         </div>
         <div class="form-group">
-            <label class="m-3">EMAIL:</label>
-            <input type="email" class="form-control" placeholder="Write Your Email">
+            <label class="m-3" asp-for="Person.Email">EMAIL:</label>
+            <input type="email" asp-for="Person.Email" class="form-control" placeholder="Write Your Email">
         </div>
         <div class="form-group">
-            <label class="m-3">BIRTH DATE:</label>
-            <input type="date" class="form-control">
+            <label class="m-3" asp-for="Person.BirthDate">BIRTH DATE:</label>
+            <input type="date" class="form-control" asp-for="Person.BirthDate">
         </div>
         <div class="row justify-content-center">
             <button type="submit" style="width:150px;" class="btn btn-primary m-3">CHECK IN</button>
         </div>
     </form>
-    <div class="col-4">
-        <form class="p-3">
-            <div class="text-info text-center">
-                <h3>VACCINE</h3>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label class="m-3">VACCINE NAME:</label>
-                    <select class="form-control">
-                        <option selected>ArtraZeneca</option>
-                        <option>PFizer</option>
-                        <option>Moderna</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="m-3">DATE:</label>
-                <input type="date" class="form-control">
-            </div>
-            <div class="row justify-content-center">
-                <button type="submit" style="width:150px;" class="btn btn-primary m-3">ADD</button>
-            </div>
-        </form>
-        <table class="table">
-            <thead>
-                <tr class="text-center bg-info text-white">
-                    <th scope="col">
-                        NAME
-                    </th>
-                    <th scope="col">
-                        DATE
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">
-
-                    </td>
-                    <td scope="row">
-
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    
 </div>

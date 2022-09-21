@@ -7,28 +7,26 @@ namespace VaccinationWebSite.Pages
     public class NewRegisterModel : PageModel
     {
         private readonly ApplicationDbContext _context;
-        public Person people { get; set; }
-        public Vaccine vaccine { get; set; }
-        public Register register { get; set; }
-        public VaccinesModel(ApplicationDbContext dbConnection)
+        public Person Person { get; set; }
+        public NewRegisterModel(ApplicationDbContext dbConnection)
         {
             _context = dbConnection;
         }
         public void OnGet()
         {
-            if (ViewData["person"] != "null")
-            {
-                people = (Person)ViewData["person"];
-            }
-            else
-            {
-
-            }
+            
         }
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPost(Person person)
         {
 
-            return RedirectToPage("Register");
+            if (ModelState.IsValid) ///Se validan los campos del producto
+            {
+                await _context.Persons.AddAsync(person);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("Index");
+            }
+            
+            return Page();
         }
     }
 }
