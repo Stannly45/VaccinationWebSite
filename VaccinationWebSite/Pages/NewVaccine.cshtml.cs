@@ -24,11 +24,6 @@ namespace VaccinationWebSite.Pages
 
             //var TableRegisters = Registers.Join(Vaccines, Registers => Registers.ID_Vaccine, Vaccine => Vaccine.ID, (Registers, Vaccines) => new { Name = Vaccines.Name, Date = Register.VaccineDate });
 
-            /*foreach (var item in TableRegisters)
-            {
-                Names.Aggregate(item.Name);
-                VaccineDate.Aggregate(item.Date);
-            }*/
             ListVaccinesRegister();
             Vaccines = _context.Vaccines;
         }
@@ -42,7 +37,6 @@ namespace VaccinationWebSite.Pages
                 {
                     //Si la fecha del nuevo registro de vacuna es menor a la ultima dosis no se registra
                     return Redirect(string.Format("~/NewVaccine?name={0}", Convert.ToInt64(ViewData["ID"])));
-                    return Page();
                 }
             }
             if (ModelState.IsValid) 
