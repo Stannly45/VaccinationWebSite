@@ -7,9 +7,33 @@
     <h1 class="p-5">NEW VACCINE</h1>
 </div>
 <div class="row justify-content-center">
+    <table class="table" align="center">
+        <thead align="center">
+            <tr>
+                <th>
+                    Vaccine
+                </th>
+                <th>
+                    Date
+                </th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            @foreach(var obj in Model.Registers)
+            {
+            <tr>
+                <td>
+                    @obj.ID_Vaccine
+                </td>
+                <td>
+                    @obj.VaccineDate
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
     <div class="col-4">
         <form class="p-3" method="post">
-            
             <input asp-for="Register.ID_Person" class="form-control" value="@ViewData["ID"]" hidden>
             <div class="form-row">
                 <div class="form-group">

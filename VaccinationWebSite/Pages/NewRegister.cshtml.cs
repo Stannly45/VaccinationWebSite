@@ -8,6 +8,7 @@ namespace VaccinationWebSite.Pages
     {
         private readonly ApplicationDbContext _context;
         public Person Person { get; set; }
+        public IEnumerable<Person> Persons { get; set; }
         public NewRegisterModel(ApplicationDbContext dbConnection)
         {
             _context = dbConnection;
@@ -18,15 +19,21 @@ namespace VaccinationWebSite.Pages
         }
         public async Task<IActionResult> OnPost(Person person)
         {
+            Persons = _context.Persons;
+            Persons = Persons.Where(s => s.CI.Equals(person.CI));
 
-            if (ModelState.IsValid) ///Se validan los campos del producto
+            if (Persons.Count() > 0)
+            {
+                return Page();
+            }
+            if (ModelState.IsValid)
             {
                 await _context.Persons.AddAsync(person);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("Index");
             }
-            
             return Page();
+
         }
     }
 }

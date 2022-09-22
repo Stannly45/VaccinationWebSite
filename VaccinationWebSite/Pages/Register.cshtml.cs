@@ -31,7 +31,6 @@ namespace VaccinationWebSite.Pages
             if (people.Count() > 0)
             {
                 Person p = people.First();
-                ViewData["ID"] = p.ID;
                 //return RedirectToPage("NewVaccine",p.ID);
                 return Redirect(string.Format("~/NewVaccine?name={0}", p.ID));
             }
