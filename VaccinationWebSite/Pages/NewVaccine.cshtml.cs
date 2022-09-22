@@ -30,7 +30,7 @@ namespace VaccinationWebSite.Pages
         public async Task<IActionResult> OnPost(Register register)
         {
             ListVaccinesRegister();
-            if (Registers != null)
+            if (Registers.Count()>0)
             {
                 Register lastRegister = Registers.Last();
                 if (register.VaccineDate < lastRegister.VaccineDate)
@@ -54,7 +54,7 @@ namespace VaccinationWebSite.Pages
             string[] i = w.Split('=');
             int id = int.Parse(i[i.Length - 1]);
             ViewData["ID"] = id;
-            Registers = _context.Registers;
+            Registers = _context.Registers.ToList();
             Registers = Registers.Where(r => r.ID_Person.Equals(id));
         }
     }
