@@ -35,38 +35,35 @@ namespace VaccinationWebSite.Pages
                     {
                         DateTime dateNow = DateTime.Now.Date;
                         int notified = 0;
+                        int sendEmail = 0;
                         switch (RegistersForUser.Count())
                         {
                             case 1:
                                 if (dateNow >= LastRegister.VaccineDate.Date.AddDays(Config.SecondVaccine - Config.NotificationDays))
                                 {
-                                    /*
-                                     Send Email to
-                                        p.Email
-                                     */
-                                    notified = 1;
+                                    sendEmail = 1;
                                 }
                                 break;
                             case 2:
                                 if ((dateNow >= LastRegister.VaccineDate.Date.AddDays(Config.ThirdVaccine - Config.NotificationDays)))
                                 {
-                                    /*
-                                     Send Email to
-                                        p.Email
-                                     */
-                                    notified = 1;
+                                    sendEmail = 1;
                                 }
                                 break;
                             case 3:
                                 if ((dateNow >= LastRegister.VaccineDate.Date.AddDays(Config.FourthVaccine - Config.NotificationDays)))
                                 {
-                                    /*
-                                     Send Email to
-                                        p.Email
-                                     */
-                                    notified = 1;
+                                    sendEmail = 1;
                                 }
                                 break;
+                        }
+                        if(sendEmail == 1)
+                        {
+                            /*
+                             Send Email to
+                                p.Email
+                             */
+                            notified = 1;
                         }
                         if (notified == 1)
                         {
