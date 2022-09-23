@@ -19,15 +19,16 @@ namespace VaccinationWebSite.Pages
         }
         public async Task<IActionResult> OnPost(Person person)
         {
-            Persons = _context.Persons;
-            Persons = Persons.Where(s => s.CI.Equals(person.CI));
-
-            if (Persons.Count() > 0)
-            {
-                return Page();
-            }
+            
             if (ModelState.IsValid && personValid(person))
             {
+                Persons = _context.Persons;
+                Persons = Persons.Where(s => s.CI.Equals(person.CI));
+
+                if (Persons.Count() > 0)
+                {
+                    return Page();
+                }
                 await _context.Persons.AddAsync(person);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("Index");
@@ -37,7 +38,7 @@ namespace VaccinationWebSite.Pages
 
         public bool personValid(Person p)
         {
-            if (p.Name.Length < 2 || p.LastName.Length < 2 || p.CI < 99999 || p.BirthDate.Date >= DateTime.Now.Date)
+            if (p.Name.Length < 2 || p.LastName.Length < 2 || p.CI < 99999 || p.BirthDate.Date > DateTime.Now.Date.AddYears(-8))
             {
                 return false;
             }

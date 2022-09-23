@@ -35,7 +35,6 @@ namespace VaccinationWebSite.Pages
                 Register lastRegister = Registers.Last();
                 if (register.VaccineDate < lastRegister.VaccineDate || (register.VaccineDate - lastRegister.VaccineDate).Days < 21 || (register.VaccineDate > DateTime.Now.Date))
                 {
-                    //Si la fecha del nuevo registro de vacuna es menor a la ultima dosis no se registra
                     return Redirect(string.Format("~/NewVaccine?name={0}", Convert.ToInt64(ViewData["ID"])));
                 }
             }

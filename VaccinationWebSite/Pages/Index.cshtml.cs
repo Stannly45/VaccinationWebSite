@@ -62,26 +62,34 @@ namespace VaccinationWebSite.Pages
                         }
                         if(sendEmail == 1)
                         {
-                            MailMessage mail = new MailMessage();
-                            mail.To.Add(p.Email);
-                            mail.Subject = "Vaccine Alert!";
-                            mail.Body = "<div class=\"alert alert-danger\">\r\n    <strong>Alert!</strong> The date of your next vaccine is approaching, for more information check the following <a href=\"https://localhost:7121/Register\" class=\"alert-link\">Link</a>.\r\n  </div>";
-                            mail.IsBodyHtml = true;
+                            try
+                            {
 
-                            //Sender
-                            mail.From = new MailAddress("john.dante.cr.058@gmail.com", "John");
+                                MailMessage mail = new MailMessage();
+                                mail.To.Add(p.Email);
+                                mail.Subject = "Vaccine Alert!";
+                                mail.Body = "<div class=\"alert alert-danger\">\r\n    <strong>Alert!</strong> The date of your next vaccine is approaching, for more information check the following <a href=\"https://localhost:7121/Register\" class=\"alert-link\">Link</a>.\r\n  </div>";
+                                mail.IsBodyHtml = true;
 
-                            //Configuration SMTP
-                            SmtpClient client = new SmtpClient();
-                            client.UseDefaultCredentials = false;
-                            //GMAIL Password
-                            client.Credentials = new NetworkCredential("john.dante.cr.058@gmail.com", "rbbmmgissspgigoq");
-                            client.Port = 587;
-                            client.EnableSsl = true;
-                            client.Host = "smtp.gmail.com";
-                            client.Send(mail);
+                                //Sender
+                                mail.From = new MailAddress("john.dante.cr.058@gmail.com", "John");
 
-                            notified = 1;
+                                //Configuration SMTP
+                                SmtpClient client = new SmtpClient();
+                                client.UseDefaultCredentials = false;
+                                //GMAIL Password
+                                client.Credentials = new NetworkCredential("john.dante.cr.058@gmail.com", "rbbmmgissspgigoq");
+                                client.Port = 587;
+                                client.EnableSsl = true;
+                                client.Host = "smtp.gmail.com";
+                                client.Send(mail);
+
+                                notified = 1;
+                            }
+                            catch(Exception x)
+                            {
+                                notified = 0;
+                            }
                         }
                         if (notified == 1)
                         {
