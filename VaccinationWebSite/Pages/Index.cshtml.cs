@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using VaccinationWebSite.Model;
 using VaccinationWebSite.Data;
+using System.Net.Mail;
+using System.Net;
+
 namespace VaccinationWebSite.Pages
 {
     public class IndexModel : PageModel
@@ -59,10 +62,25 @@ namespace VaccinationWebSite.Pages
                         }
                         if(sendEmail == 1)
                         {
-                            /*
-                             Send Email to
-                                p.Email
-                             */
+                            MailMessage mail = new MailMessage();
+                            mail.To.Add(p.Email);
+                            mail.Subject = "Vaccine Alert!";
+                            mail.Body = "<div class=\"alert alert-danger\">\r\n    <strong>Alert!</strong> The date of your next vaccine is approaching, for more information check the following <a href=\"https://localhost:7121/Register\" class=\"alert-link\">Link</a>.\r\n  </div>";
+                            mail.IsBodyHtml = true;
+
+                            //Sender
+                            mail.From = new MailAddress("john.dante.cr.058@gmail.com", "John");
+
+                            //Configuration SMTP
+                            SmtpClient client = new SmtpClient();
+                            client.UseDefaultCredentials = false;
+                            //GMAIL Password
+                            client.Credentials = new NetworkCredential("john.dante.cr.058@gmail.com", "rbbmmgissspgigoq");
+                            client.Port = 587;
+                            client.EnableSsl = true;
+                            client.Host = "smtp.gmail.com";
+                            client.Send(mail);
+
                             notified = 1;
                         }
                         if (notified == 1)

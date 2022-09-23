@@ -26,14 +26,22 @@ namespace VaccinationWebSite.Pages
             {
                 return Page();
             }
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && personValid(person))
             {
                 await _context.Persons.AddAsync(person);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("Index");
             }
             return Page();
+        }
 
+        public bool personValid(Person p)
+        {
+            if (p.Name.Length < 2 || p.LastName.Length < 2 || p.CI < 99999 || p.BirthDate.Date >= DateTime.Now.Date)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

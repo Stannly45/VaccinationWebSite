@@ -2,6 +2,7 @@
 @model VaccinationWebSite.Pages.NewVaccineModel
 @{
     ViewData["Title"] = "New Vaccine";
+    string vaccine = "";
 }
 <div class="text-info text-center">
     <h1 class="p-5">NEW VACCINE</h1>
@@ -23,7 +24,27 @@
             {
             <tr>
                 <td>
-                    @obj.ID_Vaccine
+                    @switch (obj.ID_Vaccine)
+                    {
+                        case 1:
+                            vaccine = "AstraZeneca";
+                            break;
+                        case 2:
+                            vaccine = "Pfizer";
+                            break;
+                        case 3:
+                            vaccine = "Moderna";
+                            break;
+                        case 4:
+                            vaccine = "SputnikV";
+                            break;
+                        case 5:
+                            vaccine = "Sinopharm";
+                            break;
+                        default:
+                            vaccine = "Jannsen";
+                            break;
+                    } @vaccine
                 </td>
                 <td>
                     @obj.VaccineDate

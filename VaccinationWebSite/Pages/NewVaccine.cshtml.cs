@@ -30,10 +30,10 @@ namespace VaccinationWebSite.Pages
         public async Task<IActionResult> OnPost(Register register)
         {
             ListVaccinesRegister();
-            if (Registers.Count()>0)
+            if (Registers.Count() > 0)
             {
                 Register lastRegister = Registers.Last();
-                if (register.VaccineDate < lastRegister.VaccineDate)
+                if (register.VaccineDate < lastRegister.VaccineDate || (register.VaccineDate - lastRegister.VaccineDate).Days < 21)
                 {
                     //Si la fecha del nuevo registro de vacuna es menor a la ultima dosis no se registra
                     return Redirect(string.Format("~/NewVaccine?name={0}", Convert.ToInt64(ViewData["ID"])));

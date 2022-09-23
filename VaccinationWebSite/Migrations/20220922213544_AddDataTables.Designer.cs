@@ -12,7 +12,7 @@ using VaccinationWebSite.Data;
 namespace VaccinationWebSite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220921135514_AddDataTables")]
+    [Migration("20220922213544_AddDataTables")]
     partial class AddDataTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
