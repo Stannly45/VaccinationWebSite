@@ -38,7 +38,7 @@ namespace VaccinationWebSite.Pages
 
         public bool personValid(Person p)
         {
-            if (p.Name.Length < 2 || p.LastName.Length < 2 || p.CI < 99999 || p.BirthDate.Date > DateTime.Now.Date.AddYears(-8))
+            if (p.Name.Length < 2 || p.LastName.Length < 2 || p.CI < 99999 || p.BirthDate.Date > DateTime.Now.Date.AddYears(-3))
             {
                 return false;
             }
